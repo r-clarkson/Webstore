@@ -40,10 +40,10 @@ cp -r /tmp/$TOMCAT7_CORE_UNPACKED_DIRNAME/* $CATALINA_HOME
 
 # Install Java if not yet installed
 { which java; } || { 
-    apt-get install python-software-properties
+    apt-get -y install python-software-properties
     add-apt-repository ppa:webupd8team/java
     apt-get update
-    apt-get install oracle-java8-installer
+    apt-get -y install oracle-java8-installer
 }
 
 # Create the service init.d script
